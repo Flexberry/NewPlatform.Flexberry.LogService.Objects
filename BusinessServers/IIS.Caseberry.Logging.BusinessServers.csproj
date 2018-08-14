@@ -235,10 +235,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IIS.Caseberry.Logging.MsEntLib\IIS.Caseberry.Logging.MsEntLib.csproj">
-      <Project>{6d310d62-3525-4464-a1f2-2bc2b9d96bb1}</Project>
-      <Name>IIS.Caseberry.Logging.MsEntLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Objects\IIS.Caseberry.Logging.Objects.csproj">
       <Project>{8fc7bebc-c32a-4284-af32-269155ec9d81}</Project>
       <Name>IIS.Caseberry.Logging.Objects</Name>

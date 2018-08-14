@@ -201,7 +201,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DesignResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="DataObjectIdEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
