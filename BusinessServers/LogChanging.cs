@@ -9,36 +9,56 @@
 //------------------------------------------------------------------------------
 
 using ICSSoft.STORMNET;
-using IIS.Caseberry.Logging.MsEntLib;
 
 namespace IIS.Caseberry.Logging
 {
-    using System;
-    
-    
+    using Unity;
+    using ICSSoft.Services;
+    using IIS.Caseberry.Logging.Objects;
+
     // *** Start programmer edit section *** (LogChanging CustomAttributes)
 
     // *** End programmer edit section *** (LogChanging CustomAttributes)
     [ICSSoft.STORMNET.AccessType(ICSSoft.STORMNET.AccessType.none)]
     public class LogChanging : ICSSoft.STORMNET.Business.BusinessServer
     {
-        
-        // *** Start programmer edit section *** (LogChanging CustomMembers)
 
+        // *** Start programmer edit section *** (LogChanging CustomMembers)
+        private ILogManager _logManager;
+
+        /// <summary>
+        /// Получение инстации хешера паролей.
+        /// </summary>
+        protected ILogManager PasswordHasher
+        {
+            get
+            {
+                if (_logManager != null)
+                {
+                    return _logManager;
+                }
+
+                IUnityContainer container = UnityFactory.GetContainer();
+                _logManager = container.Resolve<ILogManager>();
+
+                return _logManager;
+            }
+        }
         // *** End programmer edit section *** (LogChanging CustomMembers)
 
-        
+
         public virtual ICSSoft.STORMNET.DataObject[] OnUpdateApplicationLog(Objects.ApplicationLog UpdatedObject)
         {
             // *** Start programmer edit section *** (OnUpdateApplicationLog)
 
             if (UpdatedObject.GetStatus() == ObjectStatus.Created)
             {
-                CaseberryDatabaseTraceListener.OnNewLogEntryAdded(new DataObjectIdEventArgs
-                                                                      {
-                                                                          DataObjectId = UpdatedObject.__PrimaryKey
-                                                                      });
+                _logManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
+                {
+                    DataObjectId = UpdatedObject.__PrimaryKey
+                });
             }
+
             return new ICSSoft.STORMNET.DataObject[] { UpdatedObject };
             // *** End programmer edit section *** (OnUpdateApplicationLog)
         }

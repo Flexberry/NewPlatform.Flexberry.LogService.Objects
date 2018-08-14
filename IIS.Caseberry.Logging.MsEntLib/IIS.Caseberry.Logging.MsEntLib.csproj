@@ -201,6 +201,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DesignResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="LogManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

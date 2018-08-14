@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace IIS.Caseberry.Logging.MsEntLib
+﻿namespace IIS.Caseberry.Logging.Objects
 {
+    using System;
+
     /// <summary>
     /// Содержит идентификатор data-object
     /// </summary>
