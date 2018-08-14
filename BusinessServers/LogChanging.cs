@@ -27,9 +27,9 @@ namespace IIS.Caseberry.Logging
         private ILogManager _logManager;
 
         /// <summary>
-        /// Получение инстации хешера паролей.
+        /// Получение инстации лог менеджера.
         /// </summary>
-        protected ILogManager PasswordHasher
+        protected ILogManager LogManager
         {
             get
             {
@@ -53,7 +53,7 @@ namespace IIS.Caseberry.Logging
 
             if (UpdatedObject.GetStatus() == ObjectStatus.Created)
             {
-                _logManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
+                LogManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
                 {
                     DataObjectId = UpdatedObject.__PrimaryKey
                 });
