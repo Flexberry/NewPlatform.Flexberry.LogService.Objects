@@ -8,12 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using ICSSoft.STORMNET;
-
 namespace IIS.Caseberry.Logging
 {
     using Unity;
     using ICSSoft.Services;
+    using ICSSoft.STORMNET;
     using IIS.Caseberry.Logging.Objects;
 
     // *** Start programmer edit section *** (LogChanging CustomAttributes)
@@ -53,7 +52,7 @@ namespace IIS.Caseberry.Logging
 
             if (UpdatedObject.GetStatus() == ObjectStatus.Created)
             {
-                if (_logManager != null)
+                if (LogManager != null)
                 {
                     LogManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
                     {
