@@ -22,9 +22,9 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="IIS.Caseberry.Logging.Objects.dll" target="lib\net35\IIS.Caseberry.Logging.Objects.dll" />
-    <file src="IIS.Caseberry.Logging.Objects.XML" target="lib\net35\IIS.Caseberry.Logging.Objects.XML" />
-    <file src="IIS.Caseberry.Logging.BusinessServers.dll" target="lib\net35\IIS.Caseberry.Logging.BusinessServers.dll" />
-    <file src="IIS.Caseberry.Logging.BusinessServers.XML" target="lib\net35\IIS.Caseberry.Logging.BusinessServers.XML" />
+    <file src="IIS.Caseberry.Logging.Objects.dll" target="lib\net45\IIS.Caseberry.Logging.Objects.dll" />
+    <file src="IIS.Caseberry.Logging.Objects.XML" target="lib\net45\IIS.Caseberry.Logging.Objects.XML" />
+    <file src="IIS.Caseberry.Logging.BusinessServers.dll" target="lib\net45\IIS.Caseberry.Logging.BusinessServers.dll" />
+    <file src="IIS.Caseberry.Logging.BusinessServers.XML" target="lib\net45\IIS.Caseberry.Logging.BusinessServers.XML" />
   </files>
 </package>
