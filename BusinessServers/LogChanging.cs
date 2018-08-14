@@ -53,10 +53,13 @@ namespace IIS.Caseberry.Logging
 
             if (UpdatedObject.GetStatus() == ObjectStatus.Created)
             {
-                LogManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
+                if (_logManager != null)
                 {
-                    DataObjectId = UpdatedObject.__PrimaryKey
-                });
+                    LogManager.OnNewLogEntryAdded(new DataObjectIdEventArgs
+                    {
+                        DataObjectId = UpdatedObject.__PrimaryKey
+                    });
+                }
             }
 
             return new ICSSoft.STORMNET.DataObject[] { UpdatedObject };
