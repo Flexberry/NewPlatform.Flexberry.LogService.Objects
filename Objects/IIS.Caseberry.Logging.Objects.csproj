@@ -224,6 +224,8 @@
     </Compile>
     <Compile Include="ApplicationLogException.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DataObjectIdEventArgs.cs" />
+    <Compile Include="ILogManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
