@@ -23,7 +23,16 @@ namespace IIS.Caseberry.Logging
     {
 
         // *** Start programmer edit section *** (LogChanging CustomMembers)
-        private ILogManager _logManager;
+
+        /// <summary>
+        /// Field for <see cref="LogManager"/>.
+        /// </summary>
+        private ILogManager logManager;
+
+        /// <summary>
+        /// Flag indicates that LogManager is empty (Unity config for <see cref="ILogManager"/> is absent).
+        /// </summary>
+        private bool logManagerIsEmpty = false;
 
         /// <summary>
         /// Получение инстации лог менеджера.
@@ -32,15 +41,23 @@ namespace IIS.Caseberry.Logging
         {
             get
             {
-                if (_logManager != null)
+                if (logManager != null || logManagerIsEmpty)
                 {
-                    return _logManager;
+                    return logManager;
                 }
 
                 IUnityContainer container = UnityFactory.GetContainer();
-                _logManager = container.Resolve<ILogManager>();
+                if (container.IsRegistered<ILogManager>())
+                {
+                    logManager = container.Resolve<ILogManager>();
 
-                return _logManager;
+                    return logManager;
+                }
+                else
+                {
+                    logManagerIsEmpty = true;
+                    return null;
+                }
             }
         }
         // *** End programmer edit section *** (LogChanging CustomMembers)
