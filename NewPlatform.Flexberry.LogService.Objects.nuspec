@@ -2,35 +2,30 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>NewPlatform.Flexberry.LogService.Objects</id>
-    <version>3.0.0-beta01</version>
+    <version>3.0.0</version>
     <title>Flexberry LogService Objects</title>
     <authors>New platform</authors>
     <owners>New Platform</owners>
     <licenseUrl>http://flexberry.ru/Licenses/LicenseFlexberryORMDeveloper</licenseUrl>
     <projectUrl>http://flexberry.net</projectUrl>
-    <iconUrl>http://flexberry.net/portals/_default/skins/flexerry/images/logo_last.png</iconUrl>
+    <iconUrl>https://flexberry.net/img/logo-color.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Flexberry LogService Objects package.</description>
     <releaseNotes>
-      1) Update dependence Flexberry.ORM to 4.0.0
-      2) Remove dependencies from Flexberry.UnityFactory, Flexberry.CurrentUserService
+      1. Update dependence Flexberry.ORM to 5.0.0
+      2. Remove dependencies from Flexberry.UnityFactory, Flexberry.CurrentUserService
+      3. MsEntLib is now optional.
     </releaseNotes>
-    <copyright>Copyright New Platform Ltd 2017</copyright>
+    <copyright>Copyright New Platform Ltd 2018</copyright>
     <tags>log4net log logger Flexberry</tags>
     <dependencies>
-        <dependency id="NewPlatform.Flexberry.ORM" version="4.2.0-alpha03" />
-        <dependency id="EnterpriseLibrary.Common" version="[5.0.505.0]" />
-        <dependency id="EnterpriseLibrary.Data" version="[5.0.505.0]" />
-        <dependency id="EnterpriseLibrary.Logging" version="[5.0.505.0]" />
-        <dependency id="EnterpriseLibrary.Logging.Database" version="[5.0.505.0]" />
+        <dependency id="NewPlatform.Flexberry.ORM" version="5.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="IIS.Caseberry.Logging.Objects.dll" target="lib\net35\IIS.Caseberry.Logging.Objects.dll" />
-    <file src="IIS.Caseberry.Logging.Objects.XML" target="lib\net35\IIS.Caseberry.Logging.Objects.XML" />
-    <file src="IIS.Caseberry.Logging.MsEntLib.dll" target="lib\net35\IIS.Caseberry.Logging.MsEntLib.dll" />
-    <file src="IIS.Caseberry.Logging.MsEntLib.XML" target="lib\net35\IIS.Caseberry.Logging.MsEntLib.XML" />
-    <file src="IIS.Caseberry.Logging.BusinessServers.dll" target="lib\net35\IIS.Caseberry.Logging.BusinessServers.dll" />
-    <file src="IIS.Caseberry.Logging.BusinessServers.XML" target="lib\net35\IIS.Caseberry.Logging.BusinessServers.XML" />
+    <file src="IIS.Caseberry.Logging.Objects.dll" target="lib\net45\IIS.Caseberry.Logging.Objects.dll" />
+    <file src="IIS.Caseberry.Logging.Objects.XML" target="lib\net45\IIS.Caseberry.Logging.Objects.XML" />
+    <file src="IIS.Caseberry.Logging.BusinessServers.dll" target="lib\net45\IIS.Caseberry.Logging.BusinessServers.dll" />
+    <file src="IIS.Caseberry.Logging.BusinessServers.XML" target="lib\net45\IIS.Caseberry.Logging.BusinessServers.XML" />
   </files>
 </package>
