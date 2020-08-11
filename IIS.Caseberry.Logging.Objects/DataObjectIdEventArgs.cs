@@ -3,13 +3,13 @@
     using System;
 
     /// <summary>
-    /// Содержит идентификатор data-object
+    /// Содержит идентификатор data-object.
     /// </summary>
-    public class DataObjectIdEventArgs:EventArgs
+    public class DataObjectIdEventArgs : EventArgs
     {
         /// <summary>
-        /// Id дата-обджекта
+        /// Id дата-обджекта.
         /// </summary>
-        public Object DataObjectId { get; set; }
+        public object DataObjectId { get; set; }
     }
 }
