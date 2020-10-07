@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>NewPlatform.Flexberry.LogService.Objects</id>
-    <version>4.0.0-beta01</version>
+    <version>4.0.0-beta02</version>
     <title>Flexberry LogService Objects</title>
     <authors>New platform</authors>
     <owners>New Platform</owners>
@@ -17,7 +17,7 @@
     <copyright>Copyright New Platform Ltd 2020</copyright>
     <tags>log4net log logger Flexberry</tags>
     <dependencies>
-      <dependency id="NewPlatform.Flexberry.ORM" version="6.0.0-beta04" />
+      <dependency id="NewPlatform.Flexberry.ORM" version="6.0.0-beta10" />
     </dependencies>
   </metadata>
   <files>
