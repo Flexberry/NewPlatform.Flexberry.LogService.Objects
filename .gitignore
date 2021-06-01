@@ -3,3 +3,5 @@
 **/obj/
 **/.vs/
 *.vspscc
+/IIS.Caseberry.Logging.Objects/IIS.Caseberry.Logging.Objects.xml
+/IIS.Caseberry.Logging.BusinessServers/IIS.Caseberry.Logging.BusinessServers.xml
